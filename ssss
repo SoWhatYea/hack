@@ -1,0 +1,118 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local GUI = Instance.new("TextLabel")
+local Pizza = Instance.new("TextButton")
+local Dura = Instance.new("TextButton")
+local AttSpeedFarm = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+--Properties:
+ScreenGui.Parent = game.CoreGui
+ 
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+main.Position = UDim2.new(0.323336452, 0, 0.374501944, 0)
+main.Size = UDim2.new(0, 259, 0, 194)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+ 
+GUI.Name = "GUI"
+GUI.Parent = main
+GUI.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+GUI.Size = UDim2.new(0, 259, 0, 29)
+GUI.Font = Enum.Font.GothamBold
+GUI.Text = "Project Beatdown Gui"
+GUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+GUI.TextSize = 14.000
+ 
+Pizza.Name = "Pizza"
+Pizza.Parent = main
+Pizza.BackgroundColor3 = Color3.fromRGB(170, 255, 255)
+Pizza.Position = UDim2.new(0.065637067, 0, 0.231958762, 0)
+Pizza.Size = UDim2.new(0, 81, 0, 35)
+Pizza.Font = Enum.Font.SciFi
+Pizza.Text = "Pizza Farm"
+Pizza.TextColor3 = Color3.fromRGB(0, 0, 0)
+Pizza.TextScaled = true
+Pizza.TextSize = 10.000
+Pizza.TextWrapped = true
+Pizza.MouseButton1Down:connect(function()
+_G.MissionType = "Pizza" -- Pizza or Mail
+ 
+loadstring(game:HttpGet(('https://pastebin.com/raw/HGvTt4Ef')))()
+end)
+ 
+Dura.Name = "Dura"
+Dura.Parent = main
+Dura.BackgroundColor3 = Color3.fromRGB(170, 255, 255)
+Dura.Position = UDim2.new(0.532818556, 0, 0.231958762, 0)
+Dura.Size = UDim2.new(0, 81, 0, 35)
+Dura.Font = Enum.Font.SourceSans
+Dura.Text = "Dura Farm"
+Dura.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dura.TextSize = 14.000
+Dura.MouseButton1Down:connect(function()
+_G.on = true
+ 
+ 
+loadstring(game:HttpGet("https://pastebin.com/raw/ZL2jVRCy",true))()
+end)
+ 
+AttSpeedFarm.Name = "Att Speed Farm"
+AttSpeedFarm.Parent = main
+AttSpeedFarm.BackgroundColor3 = Color3.fromRGB(170, 255, 255)
+AttSpeedFarm.Position = UDim2.new(0.065637067, 0, 0.608247399, 0)
+AttSpeedFarm.Size = UDim2.new(0, 81, 0, 35)
+AttSpeedFarm.Font = Enum.Font.SourceSans
+AttSpeedFarm.Text = "Att Speed Farm"
+AttSpeedFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AttSpeedFarm.TextSize = 14.000
+AttSpeedFarm.MouseButton1Down:connect(function()
+_G.on = true
+ 
+ 
+loadstring(game:HttpGet("https://pastebin.com/raw/1Bd5486L",true))()
+end)
+ 
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.891891897, 0, 0, 0)
+close.Size = UDim2.new(0, 28, 0, 29)
+close.Font = Enum.Font.GothamBold
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+main.Visible = true	
+openmain.Visible = true	
+end)
+ 
+openmain.Name = "open main"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0, 0, 0.412350595, 0)
+openmain.Size = UDim2.new(0, 86, 0, 25)
+openmain.Active = true
+openmain.Draggable = true
+ 
+open.Name = "open"
+ 
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+open.Size = UDim2.new(0, 86, 0, 25)
+open.Font = Enum.Font.GothamBold
+open.Text = "OPEN"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+openmain.Visible = false 
+main.Visible = true	
+end)
